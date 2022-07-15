@@ -11,7 +11,7 @@
 
 <body class="bg-[#2850a0]">
     <section class="min-h-screen min-w-full flex flex-col justify-center items-center">
-        <div class="bg-white w-[36rem] p-12 rounded-lg">
+        <div class="bg-white w-[24rem] md:w-[32rem] lg:w-[36rem] p-12 rounded-lg">
             <header>
                 <h1 class="text-lg font-bold mb-4 text-center font-sans text-gray-700">
                     Lets Learn About Country!
@@ -41,7 +41,7 @@
     <script>
         const submit = document.querySelector('button[type="submit"]');
         const result = document.getElementById('result');
-        const countryImage = document.getElementById('countryImage');
+        const countryImage = document.getElementById('countryImage'); 
 
         submit.addEventListener('click', function(event) {
             event.preventDefault();
@@ -58,11 +58,11 @@
                     let population = data[0].population;
                     
 
-                    result.classList.add('mt-5', 'border', 'border-gray-400', 'w-full', 'p-4', 'rounded-lg');
+                    result.classList.add('mt-5', 'border', 'border-gray-400', 'w-full', 'p-6', 'rounded-lg');
 
                     result.innerHTML = `
                         <div class="flex flex-col">
-                            <div class="bg-gray-100 p-x flex justify-center rounded-lg items-center"> <img src="${flags}" alt="${commonName}" class="w-25 h-auto rounded-lg"> </div>
+                            <div class="bg-gray-200 p-x flex justify-center rounded-lg items-center"> <img src="${flags}" alt="${commonName}" class="p-6 w-25 h-auto rounded-lg"> </div>
                             <h2 class="text-lg font-bold mb-4 text-center font-sans text-gray-700">
                                 ${commonName}
                             </h2>
